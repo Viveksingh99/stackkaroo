@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 const Choose = () => {
   const Data = [
@@ -25,29 +28,63 @@ const Choose = () => {
     },
   ];
   return (
-    <div>
-      <h3 className="text-center text-[#E68F50] my-5">Why Choose Us?</h3>
-      <p className="text-center mb-5">
-        We excel with reliability, innovation and customer-centric approach for
-        our quality products.
-        <br />
-        Our dedicated team ensures that the solutions provided are dependable
-        and long-term
-      </p>
-      <div className="flex flex-wrap justify-center gap-11 my-10 px-80">
+    <>
+      <div className="text-center my-10">
+        <Typography
+          color="#E68F50"
+          fontFamily="Outfit"
+          variant="h5"
+          fontSize="40px"
+          marginBottom="10px"
+          fontWeight={600}
+          textAlign="center"
+          // marginY={1}
+        >
+          Why Choose Us?
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          fontFamily="outfit"
+          fontWeight={500}
+          fontSize="22px"
+          color="#36454F"
+        >
+          We excel with reliability, innovation and customer-centric approach
+          for our quality products.
+          <br />
+          Our dedicated team ensures that the solutions provided are dependable
+          and long-term
+        </Typography>
+      </div>
+      <div className="flex flex-wrap justify-center gap-11 my-10">
         {Data.map((item, index) => (
-          <div key={index} className="flex flex-wrap">
-            <Image
-              src={item.img}
-              width={50}
-              height={50}
-              alt="Picture of the author"
-            />
-            <p className="pl-5 mt-2 text-[#0A56F1]">{item.titel}</p>
-          </div>
+          <Card key={index} className="rounded-3xl" color='#FFFFFF'>
+            <CardContent>
+              <div className="flex flex-wrap p-5">
+                <Image
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  alt="Picture of the author"
+                />
+                <Typography
+                  variant="h6"
+                  color="#0A56F1"
+                  fontWeight={600}
+                  fontSize="22px"
+                  fontFamily="outfit"
+                  component="div"
+                  marginLeft={5}
+                  width={200}
+                >
+                  {item.titel}
+                </Typography>
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

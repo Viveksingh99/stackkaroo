@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Typography from "@mui/material/Typography";
+
 
 const Seo = () => {
   const Data = [
@@ -31,23 +33,30 @@ const Seo = () => {
   ];
   return (
     <>
-      <div>
-        <p className="text-[#E68F50] text-center my-10">SEO Services</p>
-      </div>
+        <Typography  color="#E68F50"
+        fontFamily="Outfit"
+          variant="h5"
+          fontSize="40px"
+          marginBottom="10px"
+          fontWeight={600} textAlign="center" marginY={5}>SEO Services</Typography>
       <div className="flex flex-wrap justify-center">
       {Data.map((item, index) => (
-      <div key={index} className="w-96 p-5">
+      <div key={index} className="w-[550px] m-5">
       <div className="flex flex-wrap">
+        <div>
         <Image
           src="/right.png"
-          width={30}
-          height={30}
-          alt="Picture of the author"
+          width={35}
+          height={35}
+          alt="Picture"
         />
-        <h3 className="text-[#0A56F1] px-5">{item.title}</h3>
+        </div>
+        <div>
+        <Typography variant="h5" textAlign="center" fontFamily="outfit" fontSize="28px" fontWeight={600} color="#0A56F1" paddingX={2}>{item.title}</Typography>
+        </div>
       </div>
-      <div className="pl-12">
-        <p>{item.discription}</p>
+      <div className="pl-14">
+        <Typography variant="subtitle2" fontFamily="outfit" fontWeight={500} fontSize="22px" color="#36454F">{item.discription}</Typography>
       </div>
       </div>
       ))}

@@ -1,19 +1,39 @@
-import React from 'react'
+import React from "react";
+import Typography from "@mui/material/Typography";
+import Button from '@mui/material/Button';
 
 const SmallCard = () => {
   return (
     <div>
-        <p className='text-center mb-3'>In the realm of digital solutions, we offer expertise in</p>
-        <div className='flex flex-wrap gap-10 justify-center'>
-            <p className='text-[#0A56F1]'>Website Development</p>
-            <p className='text-[#0A56F1]'>App Development</p>
-            <p className='text-[#0A56F1]'>UI/UX Design</p>
-            <p className='text-[#0A56F1]'>Digital Marketing</p>
-            <p className='text-[#0A56F1]'>SEO Optimization</p>
-        </div>
-        <p className='text-center mt-3'>showcasing our proficiency across various facets of the digital platform </p>
+      <Typography
+        fontFamily="outfit"
+        fontWeight={600}
+        fontSize="22px"
+        color="#36454F"
+        textAlign="center"
+        marginBottom="10px"
+      >
+        In the realm of digital solutions, we offer expertise in
+      </Typography>
+      <div className="flex flex-wrap gap-10 justify-center">
+      <Button variant="outlined">Website Development</Button>
+      <Button variant="outlined">App Development</Button>
+      <Button variant="outlined">UI/UX Design</Button>
+      <Button variant="outlined">Digital Marketing</Button>
+      <Button variant="outlined">SEO Optimization</Button>
+      </div>
+      <Typography
+        fontFamily="outfit"
+        fontWeight={600}
+        fontSize="22px"
+        color="#36454F"
+        textAlign="center"
+        marginY="10px"
+      >
+        showcasing our proficiency across various facets of the digital platform{" "}
+      </Typography>
     </div>
-  )
-}
+  );
+};
 
-export default SmallCard
+export default SmallCard;

@@ -15,14 +15,13 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+* {
+  font-family: outfit;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: (
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: (to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
 
